@@ -7,7 +7,8 @@ Firmware_Diy_Core() {
 	Author=AUTO
 	Author_URL=AUTO
 	Default_Flag=AUTO
-	Default_IP="192.168.1.1"
+        ## 修改默认地址为192.168.18.1
+	Default_IP="192.168.18.1"
 	Default_Title="Powered by AutoBuild-Actions"
 
 	Short_Fw_Date=true
@@ -76,6 +77,8 @@ EOF
 		ramips)
 			sed -i "/DEVICE_COMPAT_VERSION := 1.1/d" target/linux/ramips/image/mt7621.mk
 			Copy ${CustomFiles}/Depends/automount $(PKG_Finder d "package" automount)/files 15-automount
+                        ##增加的7621的passwall功能
+			AddPackage git passwall-depends openwrt-passwall-packages xiaorouji main
 		;;
 		esac
 

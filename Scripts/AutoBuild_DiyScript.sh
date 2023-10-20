@@ -77,11 +77,13 @@ EOF
 		ramips)
 			sed -i "/DEVICE_COMPAT_VERSION := 1.1/d" target/linux/ramips/image/mt7621.mk
 			Copy ${CustomFiles}/Depends/automount $(PKG_Finder d "package" automount)/files 15-automount
-                        ##增加的7621的passwall功能
+                        ##增加7621的passwall和passwall2功能
 			AddPackage git passwall-depends openwrt-passwall-packages xiaorouji main
 			AddPackage git passwall-luci openwrt-passwall xiaorouji main
 			AddPackage git passwall2-depends openwrt-passwall-packages xiaorouji main
-			AddPackage git passwall2-luci openwrt-passwall2 xiaorouji main   
+			AddPackage git passwall2-luci openwrt-passwall2 xiaorouji main
+                        ##增加7621的HelloWorld功能
+		        AddPackage git other helloworld fw876 master
 		;;
 		esac
 

@@ -72,7 +72,8 @@ EOF
 	        AddPackage git other helloworld fw876 master
 		AddPackage git themes luci-theme-neobird thinktip main
 		AddPackage git other luci-app-smartdns pymumu lede
-                AddPackage git other openwrt-packages/luci-app-vssr VergilGao openwrt-22.03
+                ## helloworld
+                AddPackage git lean luci-app-vssr jerrykuku master
 
 		case "${TARGET_BOARD}" in
 		ramips)

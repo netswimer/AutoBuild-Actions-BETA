@@ -73,7 +73,11 @@ EOF
 		AddPackage git themes luci-theme-neobird thinktip main
 		AddPackage git other luci-app-smartdns pymumu lede
                 ## helloworld
-                AddPackage git lean luci-app-vssr jerrykuku master
+                # AddPackage git lean luci-app-vssr jerrykuku master
+		AddPackage git other  small-package kenzok8 main
+      
+
+
 
 		case "${TARGET_BOARD}" in
 		ramips)

@@ -74,7 +74,8 @@ EOF
 		AddPackage git other luci-app-smartdns pymumu lede
                 ## helloworld
                 # AddPackage git lean luci-app-vssr jerrykuku master
-		AddPackage git other  small-package kenzok8 main
+		  AddPackage svn other luci-app-vssr kenzok8/small-package/luci-app-vssr/branches/main
+		# AddPackage git other  small-package kenzok8 main
       
 
 
@@ -83,7 +84,8 @@ EOF
 		ramips)
 			sed -i "/DEVICE_COMPAT_VERSION := 1.1/d" target/linux/ramips/image/mt7621.mk
 			Copy ${CustomFiles}/Depends/automount $(PKG_Finder d "package" automount)/files 15-automount
-
+                     ## 依赖
+		    AddPackage svn  luci-app-vssr-depends luci-app-vssr kenzok8/small/branches/master/luci-app-vssr
 		;;
 		esac
 

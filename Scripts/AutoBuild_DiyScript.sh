@@ -74,7 +74,7 @@ EOF
 		AddPackage git other luci-app-smartdns pymumu lede
                 ## helloworld
                 # AddPackage git lean luci-app-vssr jerrykuku master
-		  AddPackage svn other luci-app-vssr kenzok8/small-package/luci-app-vssr/branches/main
+		  AddPackage svn other luci-app-vssr kenzok8/small-package/branches/main
 		# AddPackage git other  small-package kenzok8 main
       
 

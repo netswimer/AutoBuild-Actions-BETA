@@ -85,7 +85,7 @@ EOF
 			sed -i "/DEVICE_COMPAT_VERSION := 1.1/d" target/linux/ramips/image/mt7621.mk
 			Copy ${CustomFiles}/Depends/automount $(PKG_Finder d "package" automount)/files 15-automount
                      ## 依赖
-		    AddPackage svn  luci-app-vssr-depends luci-app-vssr kenzok8/small/branches/luci-app-vssr
+		    AddPackage git  kenzok8 small kenzok8 master
 		;;
 		esac
 

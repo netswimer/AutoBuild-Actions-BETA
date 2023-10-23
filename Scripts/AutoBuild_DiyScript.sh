@@ -69,14 +69,13 @@ EOF
 		AddPackage svn other luci-app-openclash vernesong/OpenClash/branches/dev
 		AddPackage git lean luci-app-argon-config jerrykuku master
 		AddPackage git other luci-app-ikoolproxy iwrt main
-	        AddPackage git other helloworld fw876 master
+	        # AddPackage git other helloworld fw876 master
 		AddPackage git themes luci-theme-neobird thinktip main
 		AddPackage git other luci-app-smartdns pymumu lede
                 ## helloworld
-                # AddPackage git lean luci-app-vssr jerrykuku master
-		  AddPackage svn other luci-app-vssr kenzok8/small-package/branches/main
-		# AddPackage git other  small-package kenzok8 main
-      
+                  AddPackage git  kenzok8 small-package kenzok8 main
+                ## 依赖
+		  AddPackage git  kenzok8d small kenzok8 master
 
 
 
@@ -84,8 +83,7 @@ EOF
 		ramips)
 			sed -i "/DEVICE_COMPAT_VERSION := 1.1/d" target/linux/ramips/image/mt7621.mk
 			Copy ${CustomFiles}/Depends/automount $(PKG_Finder d "package" automount)/files 15-automount
-                     ## 依赖
-		    AddPackage git  kenzok8 small kenzok8 master
+
 		;;
 		esac
 

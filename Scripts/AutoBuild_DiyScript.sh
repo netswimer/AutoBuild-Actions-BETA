@@ -72,10 +72,7 @@ EOF
 	        AddPackage git other helloworld fw876 master
 		AddPackage git themes luci-theme-neobird thinktip main
 		AddPackage git other luci-app-smartdns pymumu lede
-                ## helloworld
-                ##  AddPackage git  kenzok8 small-package kenzok8 main
-                ## 依赖
-		  AddPackage git  kenzok8d small kenzok8 master
+
 
 
 
